@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: arabia;
+            src: url(/fonts/muraba-arabic-demo/MurabaArabicDEMO-Regular.otf);
+        }
+    
+        @font-face {
+            font-family: is;
+            src: url(/fonts/instrument-serif/InstrumentSerif-Regular.woff2);
+        }
+
+        nav {
+            width: 100%;
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo a {
+            font-family: 'ef';
+            font-size: 30px;
+            color: #000000;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            font-family: 'is';
+            font-size: 18px;
+            color: #000000;
+            align-items: center;
+
+            text-align: center;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            color: #ddd;
+        }
+        .content {
+            margin-top: 60px; /* Add margin to ensure content starts below the navbar */
+        }
+        h1 {
+            font-family: 'ef';
+            font-size: 150px;
+        }
+
+        .testinf {
+            margin: 0;
+            --color-text: #dedede;
+            --color-bg: #1a1a1a;
+            color: var(--color-text);
+
+        }
+
+        .scrolltext {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding: 10vh 0 25vh;
+            --marquee-width: 100vw;
+            --offset: 0vw;
+            --move-initial: calc(-25% + var(--offset));
+            --move-final: calc(-50% + var(--offset));
+            --item-font-size: 10vw;
+            counter-reset: menu;
+        }
+
+
+        .marquee {
+            position: absolute;
+            top: 0;
+            width: var(--marquee-width);
+            overflow: hidden;
+            pointer-events: none;
+            mix-blend-mode: color-burn;
+        }
+
+        .marquee__inner {
+            width: fit-content;
+            display: flex;
+            position: relative;
+            transform: translate3d(var(--move-initial), 0, 0);
+            animation: marquee 5s linear infinite;
+            animation-play-state: paused;
+            opacity: 0;
+            transition: opacity 0.1s;
+        }
+
+        .marquee .marquee__inner {
+            animation-play-state: running;
+            opacity: 1;
+            transition-duration: 0.4s;
+        }
+
+        .marquee span {
+        text-align: center;
+            white-space: nowrap;
+            font-size: var(--item-font-size);
+            padding: 0 1vw;
+            font-weight: 900;
+            line-height: 1.15;
+
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate3d(var(--move-initial), 0, 0);
+            }
+
+            100% {
+                transform: translate3d(var(--move-final), 0, 0);
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        a:focus {
+            text-decoration: none;
+        }
+        a:hover, a:active {
+            text-decoration: none;
+        }
+
+        .actualbody {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .title-page-front {
+            font-family: 'arabia';
+            font-size: 75px;
+            margin-top: 3%;
+        }     
+        .title-page-front-below {
+            font-family: 'is';
+            font-size: 65px;
+        }     
+         .songsbackpocket {
+            font-family: 'is';
+            font-size: 35px;
+
+        }
+        h3 {
+            font-family: 'is';
+            font-size: 50px;
+            animation: turn 6s linear infinite;
+        }
+
+        h5 {
+            font-family: 'is';
+            font-size: 20px;
+        }
+        @keyframes turn {
+            0% {
+                transform: rotateY(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: rotateY(360deg);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#">home</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#thesis">thesis</a></li>
+                <li><a href="#about">background</a></li>
+                <li><a href="#services">trhee</a></li>
+                <li><a href="#contact">four</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Existing content -->
+
+
+   <div class="actualbody"> 
+
+    <div class="title-page-front">
+        <h2>الربيع العربي</h2>
+    </div>
+    <div class="title-page-front-below">
+        <h2>[First] Arab Spring</h2>
+    </div>
+
+
+    <div class ="testinf"><nav class="scrolltext">
+        <div class="scrolltext_item">
+          <div class="marquee">
+            <div class="marquee__inner">
+              <span> !الشعب يريد إسقاط النظام</span>
+              <span> !الشعب يريد إسقاط النظام</span>
+              <span> !الشعب يريد إسقاط النظام</span>
+              <span> !الشعب يريد إسقاط النظام</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      </div>
+    
+</div>
+</body>
+</html>
